@@ -1,13 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetInteractables : MonoBehaviour
 {
+   
     public enum InteractableType
     {
         Collectable,
-        Trap
+        Restart
     }
-
     public InteractableType type;
     GameManager gameManager;
 
@@ -15,13 +17,13 @@ public class TargetInteractables : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
     }
-
     public void Trigger()
     {
-        if(type == InteractableType.Collectable)
+        if (type == InteractableType.Collectable)
         {
             gameManager.TargetCollected();
         }
         gameObject.SetActive(false);
     }
+
 }
