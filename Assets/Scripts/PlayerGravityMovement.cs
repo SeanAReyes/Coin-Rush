@@ -6,13 +6,13 @@ public class PlayerGravityMovement : MonoBehaviour
     [SerializeField] float maxSpeed = 5f;
     [SerializeField] float accel = 12f;
     [SerializeField] float decel = 16f;
-
     [SerializeField] float jumpImpulse = 7f;
 
     [SerializeField] int score = 0;
 
     Vector2 currentVelocity;
     Rigidbody2D rb;
+    Vector2 startPos;
 
     float moveX;
     bool jumpPressed;
@@ -30,6 +30,10 @@ public class PlayerGravityMovement : MonoBehaviour
         {
             jumpPressed = true;
         }
+    }
+    void Start()
+    {
+        startPos = rb.position;
     }
 
     void FixedUpdate()
@@ -51,6 +55,24 @@ public class PlayerGravityMovement : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
             jumpPressed = false;
+        }
+    }
+
+    public void Respawn()
+    {
+        rb.position = startPos;
+        rb.velocity = Vector2.zero;
+        currentVelocity = Vector2.zero;
+    }
+    
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("COLLISION DETECTED WITH: " + collision.collider.name);
+
+        if (collision.collider.CompareTag("Wall"))
+        {
+            Respawn();
+            Debug.Log("Hit Wall! Restart!");
         }
     }
 
