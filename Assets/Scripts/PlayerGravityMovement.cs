@@ -7,6 +7,8 @@ public class PlayerGravityMovement : MonoBehaviour
     [SerializeField] float accel = 12f;
     [SerializeField] float decel = 16f;
     [SerializeField] float jumpImpulse = 7f;
+    [SerializeField] int maxJumps = 2;
+    int jumpsLeft;
 
     [SerializeField] int score = 0;
 
@@ -26,9 +28,10 @@ public class PlayerGravityMovement : MonoBehaviour
     {
         moveX = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && jumpsLeft > 0)
         {
             jumpPressed = true;
+            jumpsLeft--;
         }
     }
     void Start()
@@ -53,6 +56,7 @@ public class PlayerGravityMovement : MonoBehaviour
 
         if (jumpPressed)
         {
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
             jumpPressed = false;
         }
@@ -63,11 +67,14 @@ public class PlayerGravityMovement : MonoBehaviour
         rb.position = startPos;
         rb.velocity = Vector2.zero;
         currentVelocity = Vector2.zero;
+        jumpsLeft = maxJumps;
     }
     
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("COLLISION DETECTED WITH: " + collision.collider.name);
+
+        jumpsLeft = maxJumps;
 
         if (collision.collider.CompareTag("Wall"))
         {
