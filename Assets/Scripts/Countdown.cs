@@ -7,6 +7,12 @@ public class Countdown : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI countdownText;
     [SerializeField] float remainingTime;
+    GameManager gameManager;
+
+    void Awake()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
 
     void Update()
     { 
@@ -17,10 +23,9 @@ public class Countdown : MonoBehaviour
         else if (remainingTime < 0)
         {
             remainingTime = 0;
-            //GameOver();
+            gameManager.GameOver();
         }
 
-        
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
