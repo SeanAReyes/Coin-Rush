@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e95f38d2984c14abd6f99ff48685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boingClip: {fileID: 8300000, guid: 3f8a16a0097a54e90b042c3573815860, type: 3}
   bounceForce: 15
 --- !u!1001 &66336426
 PrefabInstance:
@@ -1022,6 +1023,9 @@ MonoBehaviour:
   jumpImpulse: 7
   maxJumps: 2
   score: 0
+  coinClip: {fileID: 8300000, guid: 1bab2eaf5283947a1825b46678abff50, type: 3}
+  jumpClip: {fileID: 8300000, guid: c7db8a5b19fef407b8bc9ec33e4d440f, type: 3}
+  deathClip: {fileID: 8300000, guid: 5fa8bd762f90e473c8ad1e2bd57b8821, type: 3}
 --- !u!61 &656662847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2007,6 +2011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e95f38d2984c14abd6f99ff48685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boingClip: {fileID: 8300000, guid: 3f8a16a0097a54e90b042c3573815860, type: 3}
   bounceForce: 15
 --- !u!1 &826939066
 GameObject:
@@ -2402,6 +2407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e95f38d2984c14abd6f99ff48685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boingClip: {fileID: 8300000, guid: 3f8a16a0097a54e90b042c3573815860, type: 3}
   bounceForce: 15
 --- !u!1 &1117951943
 GameObject:
@@ -3015,6 +3021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e95f38d2984c14abd6f99ff48685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boingClip: {fileID: 8300000, guid: 3f8a16a0097a54e90b042c3573815860, type: 3}
   bounceForce: 15
 --- !u!1001 &1266142898
 PrefabInstance:
@@ -3575,6 +3582,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1513606831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1513606833}
+  - component: {fileID: 1513606832}
+  m_Layer: 0
+  m_Name: SoundFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1513606832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513606831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61d17d596655d49f881b8ce380659e17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxSource: {fileID: 5854830331416500609, guid: 7c70aed8005ed4d8cac45f570ff2f2a6, type: 3}
+--- !u!4 &1513606833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1513606831}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.7206914, y: -0.09254661, z: 0.7998655}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1620384725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5009,6 +5061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e95f38d2984c14abd6f99ff48685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boingClip: {fileID: 8300000, guid: 3f8a16a0097a54e90b042c3573815860, type: 3}
   bounceForce: 15
 --- !u!1001 &1892496124
 PrefabInstance:
@@ -5265,3 +5318,4 @@ SceneRoots:
   - {fileID: 1467334673}
   - {fileID: 681998753}
   - {fileID: 1117951944}
+  - {fileID: 1513606833}

@@ -11,6 +11,9 @@ public class PlayerGravityMovement : MonoBehaviour
     int jumpsLeft;
 
     [SerializeField] int score = 0;
+    [SerializeField] private AudioClip coinClip;
+    [SerializeField] private AudioClip jumpClip;
+    [SerializeField] private AudioClip deathClip;
 
     Vector2 currentVelocity;
     Rigidbody2D rb;
@@ -59,6 +62,7 @@ public class PlayerGravityMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.AddForce(Vector2.up * jumpImpulse, ForceMode2D.Impulse);
             jumpPressed = false;
+            AudioManager.instance.PlaySoundFXClip(jumpClip, transform, 0.5f);
         }
     }
 
@@ -68,6 +72,7 @@ public class PlayerGravityMovement : MonoBehaviour
         rb.velocity = Vector2.zero;
         currentVelocity = Vector2.zero;
         jumpsLeft = maxJumps;
+        AudioManager.instance.PlaySoundFXClip(deathClip, transform, 0.7f);
     }
     
     void OnCollisionEnter2D(Collision2D collision)
@@ -89,6 +94,7 @@ public class PlayerGravityMovement : MonoBehaviour
             score += 1;
             target.Trigger();
             Debug.Log("Picked up! Score = " + score);
+            AudioManager.instance.PlaySoundFXClip(coinClip, transform, 0.5f);
 
         }
 

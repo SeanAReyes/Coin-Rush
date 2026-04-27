@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BouncePad : MonoBehaviour
 {
+    [SerializeField] private AudioClip boingClip;
     [SerializeField] float bounceForce = 15f;
 
     private void OnTriggerStay2D(Collider2D other)
@@ -19,6 +20,7 @@ public class BouncePad : MonoBehaviour
         PlayerGravityMovement player = other.GetComponent<PlayerGravityMovement>();
         if (player != null)
           player.ResetJumps();
+          AudioManager.instance.PlaySoundFXClip(boingClip, transform, 0.8f);
     }    
 
 }
