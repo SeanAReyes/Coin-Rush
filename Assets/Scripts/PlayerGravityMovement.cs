@@ -91,5 +91,18 @@ public class PlayerGravityMovement : MonoBehaviour
             Debug.Log("Picked up! Score = " + score);
 
         }
+
+        if (other.CompareTag("Obstacle"))
+        {
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            if (gameManager != null)
+            {
+                Respawn();
+            }
+        }
+    }
+    public void ResetJumps()
+    {
+        jumpsLeft = maxJumps;
     }
 }
