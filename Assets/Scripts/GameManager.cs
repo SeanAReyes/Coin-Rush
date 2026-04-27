@@ -56,22 +56,10 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-    public void Retry()
-    {
-        Debug.Log("Retry Called. AudioManager.instance = " + AudioManager.instance);
-        Time.timeScale = 1f;
-        AudioManager.instance.RestartMusic();
-        SceneManager.LoadScene("Level 1");
-    }
-
-    public void LoadLevelOne()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Level 1");
-    }
     public void RestartGame()
     {
         Time.timeScale = 1f;
+        AudioManager.instance.RestartMusic();
         SceneManager.LoadScene("Level 1");
     }
 }
