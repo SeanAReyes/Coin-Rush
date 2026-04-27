@@ -55,7 +55,11 @@ public class GameManager : MonoBehaviour
         Replay.SetActive(true);
         Time.timeScale = 0f;
     }
-
+    public void LoadLevelOne()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level 1");
+    }
     public void RestartGame()
     {
         Time.timeScale = 1f;
