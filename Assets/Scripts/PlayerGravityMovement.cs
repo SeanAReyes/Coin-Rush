@@ -72,8 +72,6 @@ public class PlayerGravityMovement : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("COLLISION DETECTED WITH: " + collision.collider.name);
-
         jumpsLeft = maxJumps;
 
         if (collision.collider.CompareTag("Wall"))
@@ -85,22 +83,13 @@ public class PlayerGravityMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Simplified way (tag + directly disable):
-        // if (other.CompareTag("Target"))
-        // {
-        //     score += 1;
-        //     other.gameObject.SetActive(false);
-        //     Debug.Log("Picked up! Score = " + score);
-        // }
-
-        // Clear accessing the other object by explicitly grabbing the other object�s script/component so you can call its behavior.
         TargetInteractables target = other.GetComponent<TargetInteractables>();
         if (target != null)
         {
             score += 1;
             target.Trigger();
-
             Debug.Log("Picked up! Score = " + score);
+
         }
     }
 }
