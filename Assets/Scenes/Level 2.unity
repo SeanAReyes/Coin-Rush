@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e95f38d2984c14abd6f99ff48685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 10
+  bounceForce: 15
 --- !u!61 &95594069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3781,7 +3781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e95f38d2984c14abd6f99ff48685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 10
+  bounceForce: 15
 --- !u!61 &526986421
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6037,7 +6037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24e95f38d2984c14abd6f99ff48685f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceForce: 10
+  bounceForce: 15
 --- !u!1001 &1502954166
 PrefabInstance:
   m_ObjectHideFlags: 0

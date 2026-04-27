@@ -9,12 +9,14 @@ public class GameManager : MonoBehaviour
     int score; 
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject gameoverScreen;
+    [SerializeField] GameObject Replay;
 
     void Start()
     {
         remainingTargets = FindObjectsOfType<TargetInteractables>().Length;
         winScreen.SetActive(false);
         gameoverScreen.SetActive(false);
+        Replay.SetActive(false);
         Time.timeScale = 1f;
         Debug.Log("Targets remaining = " + remainingTargets);
     }
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("GAME OVER! Try again!");
         gameoverScreen.SetActive(true);
+        Replay.SetActive(true);
         Time.timeScale = 0f;
     }
 
@@ -59,4 +62,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void LoadLevelOne()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level 1");
+    }
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level 1");
+    }
 }
