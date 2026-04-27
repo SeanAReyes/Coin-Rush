@@ -58,8 +58,10 @@ public class GameManager : MonoBehaviour
 
     public void Retry()
     {
+        Debug.Log("Retry Called. AudioManager.instance = " + AudioManager.instance);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager.instance.RestartMusic();
+        SceneManager.LoadScene("Level 1");
     }
 
     public void LoadLevelOne()

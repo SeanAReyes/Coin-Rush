@@ -20,8 +20,15 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+   
     private void Start()
     {
+        musicSource.clip = background;
+        musicSource.Play();
+    }
+    public void RestartMusic()
+    {
+        musicSource.Stop();
         musicSource.clip = background;
         musicSource.Play();
     }
