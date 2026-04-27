@@ -2208,8 +2208,8 @@ Tilemap:
   - first: {x: -1, y: -8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2218,8 +2218,8 @@ Tilemap:
   - first: {x: 2, y: -8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3307,11 +3307,11 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 25
+  - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 8cfa205f071b343b7af412268040e898, type: 2}
   - m_RefCount: 87
     m_Data: {fileID: 11400000, guid: bcd7c0a65fe1e4c4ca48c0d9ede55628, type: 2}
-  - m_RefCount: 134
+  - m_RefCount: 136
     m_Data: {fileID: 11400000, guid: 241233c90d8194ed8afb0736157609dd, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -3334,11 +3334,11 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 25
+  - m_RefCount: 23
     m_Data: {fileID: 243115360, guid: 70d27327fa7d64e5da8755f18a9b6e8c, type: 3}
   - m_RefCount: 87
     m_Data: {fileID: -25495211, guid: 70d27327fa7d64e5da8755f18a9b6e8c, type: 3}
-  - m_RefCount: 134
+  - m_RefCount: 136
     m_Data: {fileID: -83033600, guid: 70d27327fa7d64e5da8755f18a9b6e8c, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -4459,7 +4459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1107436170
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5021,7 +5021,7 @@ Transform:
   m_GameObject: {fileID: 1234900619}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.97, y: -15.13, z: 0}
+  m_LocalPosition: {x: 3.63, y: -15.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5784,7 +5784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1373677673
 RectTransform:
   m_ObjectHideFlags: 0
